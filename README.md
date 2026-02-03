@@ -1,7 +1,7 @@
 # ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
 
 <p align="center">
-  <img src="pic/teaser.png" width="800" alt="ProAct Teaser" />
+  <img src="pic/teaser.png" width="600" alt="ProAct Teaser" />
 </p>
 
 ## Abstract
