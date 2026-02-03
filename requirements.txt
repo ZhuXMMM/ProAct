@@ -1,0 +1,21 @@
+# Core training stack
+torch
+transformers
+accelerate
+datasets
+peft
+trl
+
+# Common training/runtime utilities
+numpy
+pandas
+tqdm
+pyyaml
+scikit-learn
+Pillow
+
+# Optional (often used for 4-bit / quantized training)
+bitsandbytes
+
+# Optional (if you use local OpenAI-compatible serving scripts)
+vllm

@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+.idea/
+.vscode/
+.env
+.venv/
+venv/
+outputs/
+output/
+wandb/
+logs/
+*.log
+save/
+models_output/
