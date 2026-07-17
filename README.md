@@ -6,13 +6,13 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/ZhuXMMM/ProAct/releases/download/assets/tutorial.mp4">
+  <a href="https://github.com/ZhuXMMM/ProAct/blob/main/pic/tutorial.mp4">
     <img src="pic/tutorial_poster.png" width="720" alt="ProAct tutorial video — click to play" />
   </a>
 </p>
 
 <p align="center">
-  <i>▶️ Click the thumbnail to watch the ProAct tutorial video.</i>
+  <i>▶️ Click the thumbnail to play the ProAct tutorial video (opens the in-browser player).</i>
 </p>
 
 📄 **Paper:** [arXiv:2602.03430](https://arxiv.org/abs/2602.03430)
