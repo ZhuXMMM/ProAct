@@ -13,9 +13,9 @@
   <i>▶️ ProAct tutorial video (plays inline on GitHub). If it does not render, <a href="https://github.com/ZhuXMMM/ProAct/releases/download/assets/tutorial.mp4">download it here</a>.</i>
 </p>
 
-<p align="center">
-  🎉 <b>News:</b> ProAct has been accepted to <b>ICML 2026</b>! 🎉
-</p>
+## 🖼️ News
+
+- **[2026-07]** 🎉 ProAct has been accepted to **ICML 2026**!
 
 ## Abstract
 
