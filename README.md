@@ -6,7 +6,11 @@
 </p>
 
 <p align="center">
-  <img src="pic/teaser.png" width="600" alt="ProAct Teaser" />
+  <video src="https://github.com/ZhuXMMM/ProAct/releases/download/assets/tutorial.mp4" poster="pic/tutorial_poster.png" width="720" controls muted loop playsinline></video>
+</p>
+
+<p align="center">
+  <i>▶️ ProAct tutorial video. If it does not play inline, <a href="https://github.com/ZhuXMMM/ProAct/releases/download/assets/tutorial.mp4">click here to watch/download</a>.</i>
 </p>
 
 📄 **Paper:** [arXiv:2602.03430](https://arxiv.org/abs/2602.03430)
