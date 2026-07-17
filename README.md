@@ -1,8 +1,15 @@
 # ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
 
 <p align="center">
+  <a href="https://arxiv.org/abs/2602.03430"><img src="https://img.shields.io/badge/arXiv-2602.03430-b31b1b.svg" alt="arXiv"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="License: Apache 2.0"></a>
+</p>
+
+<p align="center">
   <img src="pic/teaser.png" width="600" alt="ProAct Teaser" />
 </p>
+
+📄 **Paper:** [arXiv:2602.03430](https://arxiv.org/abs/2602.03430)
 
 ## Abstract
 
@@ -12,7 +19,9 @@ Extensive experiments demonstrate that ProAct-Helper outperforms strong closed-s
 
 ---
 
-Datasets will be made available in a future release.
+## Dataset
+
+Our self-collected data is currently undergoing a **privacy review**. The dataset will be released once the review is complete — **coming soon**.
 
 ## Repository Layout
 
@@ -20,7 +29,7 @@ Datasets will be made available in a future release.
 - `test/onestep_planning/`: One-step planning evaluation code and scripts.
 - `test/detection_prediction/`: Detection / prediction evaluation helpers and test runner.
 - `module_tools/TFace/recognition/README.md`: Third-party face recognition module README (with a note that data will be released in the future).
-- `data/`: Placeholder directory for future data release.
+- `data/`: Placeholder directory. Self-collected data is under privacy review (coming soon).
 
 ## Quickstart
 
@@ -85,4 +94,21 @@ For LLM-based evaluation via OpenAI-compatible endpoints or Gemini, use the prov
 - **No secrets in repo**: API keys are not hardcoded; provide them via environment variables.
 - **Offline mode**: Some scripts set `HF_HUB_OFFLINE=1` and `TRANSFORMERS_OFFLINE=1` by default. Override them if you want online downloads.
 
-# ProAct
+## Citation
+
+If you find ProAct useful in your research, please consider citing:
+
+```bibtex
+@article{proact2026,
+  title={ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response},
+  author={ProAct Authors},
+  journal={arXiv preprint arXiv:2602.03430},
+  year={2026}
+}
+```
+
+## License
+
+This project's code is released under the [Apache License 2.0](LICENSE).
+
+The self-collected dataset is not covered by this license and will be released separately (with its own terms) after the ongoing privacy review is complete.
