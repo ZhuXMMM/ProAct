@@ -6,13 +6,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/ZhuXMMM/ProAct/blob/main/pic/tutorial.mp4">
-    <img src="pic/tutorial_poster.png" width="720" alt="ProAct tutorial video — click to play" />
-  </a>
+  <video src="https://github.com/user-attachments/assets/5696e51d-b6cf-42b2-abfa-7e885cebab69" poster="pic/tutorial_poster.png" width="720" controls muted playsinline></video>
 </p>
 
 <p align="center">
-  <i>▶️ Click the thumbnail to play the ProAct tutorial video (opens the in-browser player).</i>
+  <i>▶️ ProAct tutorial video (plays inline on GitHub). If it does not render, <a href="https://github.com/ZhuXMMM/ProAct/releases/download/assets/tutorial.mp4">download it here</a>.</i>
 </p>
 
 📄 **Paper:** [arXiv:2602.03430](https://arxiv.org/abs/2602.03430)
