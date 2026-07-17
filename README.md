@@ -13,11 +13,17 @@
   <i>▶️ ProAct tutorial video (plays inline on GitHub). If it does not render, <a href="https://github.com/ZhuXMMM/ProAct/releases/download/assets/tutorial.mp4">download it here</a>.</i>
 </p>
 
-📄 **Paper:** [arXiv:2602.03430](https://arxiv.org/abs/2602.03430)
+<p align="center">
+  🎉 <b>News:</b> ProAct has been accepted to <b>ICML 2026</b>! 🎉
+</p>
 
 ## Abstract
 
 While passive agents merely follow instructions, proactive agents align with higher-level objectives, such as assistance and safety by continuously monitoring the environment to determine when and how to act. However, developing proactive agents is hindered by the lack of specialized resources. To address this, we introduce **ProAct-75**, a benchmark designed to train and evaluate proactive agents across diverse domains, including assistance, maintenance, and safety monitoring. Spanning 75 tasks, our dataset features 91,581 step-level annotations enriched with explicit task graphs. These graphs encode step dependencies and parallel execution possibilities, providing the structural grounding necessary for complex decision-making. Building on this benchmark, we propose **ProAct-Helper**, a reference baseline powered by a MLLM that grounds decision-making in state detection, and leveraging task graphs to enable entropy-driven heuristic search for action selection, allowing agents to execute parallel threads independently rather than mirroring the human's next step.
+
+<p align="center">
+  <img src="pic/teaser.png" width="720" alt="ProAct Teaser" />
+</p>
 
 Extensive experiments demonstrate that ProAct-Helper outperforms strong closed-source models, improving trigger detection mF1 by 6.21%, saving 0.25 more steps in online one-step decision, and increasing the rate of parallel actions by 15.58%.
 
