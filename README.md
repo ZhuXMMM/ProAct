@@ -35,13 +35,17 @@ Access to the self-collected ProAct data is being prepared for **non-commercial 
 
 The Hugging Face application and download endpoint is being configured. During setup, applications may be sent to [zhuxiaomeng224@gmail.com](mailto:zhuxiaomeng224@gmail.com?subject=ProAct%20dataset%20access%20request) using the template in the access instructions. Submission does not automatically grant access. The final release will state its exact scope; access to the self-collected subset does not imply that all media described in the full ProAct-75 benchmark is included.
 
+The planned scope is 495 self-collected Tencent videos at original resolution with privacy masks, plus the corresponding exact training keyframes with a maximum image side of 768 pixels and matching privacy masks. The final asset inventory and video-to-keyframe/annotation mappings are still being confirmed; the training-keyframe count is pending and no download-ready package is claimed. Known source annotation issues include task-graph/vocabulary label discrepancies and conflicting embedded camera IDs. The release metadata will preserve and flag these issues rather than silently correcting source labels.
+
+COIN, Ego-Exo4D, and UCF-Crime media are not reuploaded here; use the [official source acquisition links](data/README.md). The full 75-task graph catalog remains `reference_only` metadata and does not imply that all benchmark media are included.
+
 ## Repository Layout
 
 - `train/`: SFT training code and the single runnable training script.
 - `test/onestep_planning/`: One-step planning evaluation code and scripts.
 - `test/detection_prediction/`: Detection / prediction evaluation helpers and test runner.
 - `module_tools/TFace/recognition/README.md`: Third-party face recognition module README (with a note that data will be released in the future).
-- `data/`: Research-only dataset access instructions and the data use agreement; video files are hosted separately under controlled access.
+- `data/`: Research-only dataset access instructions and the data use agreement; the planned video and training-keyframe files will be hosted separately under controlled access.
 
 ## Quickstart
 

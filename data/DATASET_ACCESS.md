@@ -4,6 +4,8 @@ ProAct dataset access is intended for individually approved researchers conducti
 
 **Current status:** the online application endpoint and Hugging Face dataset repository are being configured. There is no live download link in this document. The final release contents will be listed with the dataset; access should not be taken to imply that every task or asset described in the paper is included.
 
+The planned scope is 495 self-collected Tencent videos at original resolution with privacy masks, plus the corresponding exact training keyframes with a maximum image side of 768 pixels and matching privacy masks. The exact asset inventory and keyframe/annotation mappings still require confirmation and validation. The training-keyframe count is pending, and this document does not claim a download-ready package. Source annotation label discrepancies and embedded camera-ID conflicts will be disclosed in the release metadata.
+
 ## How access will work
 
 1. Sign in to your own individual Hugging Face account.
