@@ -31,7 +31,16 @@ Extensive experiments demonstrate that ProAct-Helper outperforms strong closed-s
 
 ## Dataset
 
-Our self-collected data is currently undergoing a **privacy review**. The dataset will be released once the review is complete — **coming soon**.
+The [self-collected research release](https://huggingface.co/datasets/Zhuxmmm/ProAct) contains **495 privacy-masked, silent 3840×2160 videos** and **18,747 masked 768×432 training keyframes** from 165 takes and 15 annotated tasks. It includes 569 annotation records and 2,918 step segments, preserving the existing 324-train/171-test video split without adding a validation split. The full 75-task graph catalog is `reference_only`.
+
+Access requires individual manual approval for **non-commercial scientific research**. Read the public [application instructions](data/DATASET_ACCESS.md) and [Data Use Agreement](https://github.com/ZhuXMMM/ProAct/blob/6afeb9c6c54d0ef649a741a01c40e6e2c3816383/data/DATA_USE_AGREEMENT.md), then apply with your own account on the Hugging Face dataset page. After approval, authenticate with that account:
+
+```sh
+hf auth login
+hf download Zhuxmmm/ProAct --repo-type dataset --local-dir ProAct
+```
+
+Original training filenames are retained; metadata record the actual decoded frame ordinal and distinguish strong numeric alignment from historical inference. Source annotation label discrepancies and embedded camera-ID conflicts remain disclosed. See the [data overview](data/README.md) for alignment details, research limitations and official COIN/Ego-Exo4D/UCF-Crime acquisition links; external media are obtained separately.
 
 ## Repository Layout
 
@@ -39,7 +48,7 @@ Our self-collected data is currently undergoing a **privacy review**. The datase
 - `test/onestep_planning/`: One-step planning evaluation code and scripts.
 - `test/detection_prediction/`: Detection / prediction evaluation helpers and test runner.
 - `module_tools/TFace/recognition/README.md`: Third-party face recognition module README (with a note that data will be released in the future).
-- `data/`: Placeholder directory. Self-collected data is under privacy review (coming soon).
+- `data/`: Public research-access instructions, data use agreement, scope and limitations; masked videos and training keyframes are hosted separately on Hugging Face with individual approval.
 
 ## Quickstart
 
@@ -121,4 +130,4 @@ If you find ProAct useful in your research, please consider citing:
 
 This project's code is released under the [Apache License 2.0](LICENSE).
 
-The self-collected dataset is not covered by this license and will be released separately (with its own terms) after the ongoing privacy review is complete.
+The self-collected dataset is **not** covered by the code license. It is governed separately by the [Data Use Agreement](data/DATA_USE_AGREEMENT.md), with research-only use and individual access approval.
