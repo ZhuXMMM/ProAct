@@ -1,26 +1,45 @@
 # ProAct Data
 
-The self-collected dataset is intended for **non-commercial scientific research only** and requires individual manual approval. The planned dataset files will be hosted separately from this code repository.
+The self-collected research release is hosted on [Hugging Face](https://huggingface.co/datasets/Zhuxmmm/ProAct) with individual manual approval for **non-commercial scientific research**. This directory contains the public [application instructions](DATASET_ACCESS.md) and [Data Use Agreement](https://github.com/ZhuXMMM/ProAct/blob/6afeb9c6c54d0ef649a741a01c40e6e2c3816383/data/DATA_USE_AGREEMENT.md); media are downloaded separately after approval.
 
-- [Apply for dataset access](DATASET_ACCESS.md): application fields, the planned Hugging Face approval flow, and the email application template available during setup.
-- [Data Use Agreement](DATA_USE_AGREEMENT.md): research-only use, privacy, individual access, redistribution restrictions, and permitted research outputs.
+| Item | Included |
+| --- | --- |
+| Masked videos | 495 at 3840×2160, with no audio track |
+| Masked training keyframes | 18,747 JPEGs at 768×432 |
+| Takes / annotated tasks | 165 / 15 |
+| Annotation records / step segments | 569 / 2,918 |
+| Existing video split | 324 train / 171 test; no validation split |
+| Full 75-task graph catalog | `reference_only`; no additional media coverage |
 
-The Hugging Face application and download endpoint is being configured. There is no public video download link in this repository. Approval and the final download instructions will identify the dataset version and exact included scope; the self-collected release should not be treated as every media asset described in the full 75-task benchmark.
+## Access
 
-The planned scope is 495 self-collected Tencent videos at original resolution with privacy masks, plus the corresponding exact training keyframes with a maximum image side of 768 pixels and matching privacy masks. The final inventory and keyframe/annotation mapping remain under confirmation. Local reduced-resolution review proxies are not the planned release media, and their review does not establish that the final files are ready.
+Read the agreement, sign in to your own Hugging Face account, and complete the dataset page's research-access form. Applications notify zhuxiaomeng224@gmail.com in real time and are reviewed manually. Each researcher applies separately; submission does not automatically grant access.
 
-Source annotations have known task-graph/vocabulary label discrepancies and embedded camera-ID conflicts. The planned metadata will preserve source labels and timestamps and identify unresolved labels and source-ID conflicts explicitly; final validation notes depend on the settled inventory.
+After approval, use the approved account:
 
-The full 75-task graph catalog is `reference_only` metadata and does not imply that recordings for every benchmark task are included.
+```sh
+hf auth login
+hf download Zhuxmmm/ProAct --repo-type dataset --local-dir ProAct
+```
+
+See [Dataset Access](DATASET_ACCESS.md) for the required fields and acceptance statements. The code's Apache 2.0 license does not cover these data.
+
+## Frame labels and research limitations
+
+Original training filenames are retained. Each JPEG is re-extracted from the final masked native video at the actual decoded ordinal recorded in `metadata/keyframes.jsonl`, then resized to 768×432. Use `frame_index_zero_based` for the actual ordinal and `filename_frame_label` for the historical filename label; they can differ.
+
+Of the 18,747 alignments, **12,727 have strong numeric matches** and **6,020 use disclosed historical inference**. There are **5,684 preceding-frame selections**, including the six historical endpoint labels that select the last available frame N−1. Those six are included in 5,684. Privacy masks and recompression change pixels; filename preservation does not imply pixel identity with the historical JPEGs.
+
+Source task-graph/vocabulary label discrepancies and conflicting embedded camera IDs are preserved and flagged in `metadata/validation_notes.json`. Original labels, timestamps and split assignments are retained. Historical keyframe alignments marked as inference remain uncertain and should be considered when selecting examples or evaluating results.
 
 ## External source media
 
-COIN, Ego-Exo4D, and UCF-Crime media are not reuploaded in this self-collected release. Obtain them separately through their official sources and follow each source's access instructions and terms. ProAct access approval does not grant access to those datasets.
+COIN, Ego-Exo4D and UCF-Crime media are not reuploaded here. Obtain them through their official sources and follow each source's terms; ProAct approval does not grant access to them.
 
-| Source | Official starting point |
+| Source | Official access and download instructions |
 | --- | --- |
-| COIN | [Dataset website and download instructions](https://coin-dataset.github.io/) |
+| COIN | [Dataset website](https://coin-dataset.github.io/) |
 | Ego-Exo4D | [Getting Started](https://docs.ego-exo4d-data.org/getting-started/) |
-| UCF-Crime | [Official project and download instructions](https://www.crcv.ucf.edu/research/real-world-anomaly-detection-in-surveillance-videos/) |
+| UCF-Crime | [Official project page](https://www.crcv.ucf.edu/research/real-world-anomaly-detection-in-surveillance-videos/) |
 
 Contact: [zhuxiaomeng224@gmail.com](mailto:zhuxiaomeng224@gmail.com).

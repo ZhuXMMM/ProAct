@@ -31,13 +31,16 @@ Extensive experiments demonstrate that ProAct-Helper outperforms strong closed-s
 
 ## Dataset
 
-Access to the self-collected ProAct data is being prepared for **non-commercial scientific research only**, with **individual manual approval**. See [Dataset Access](data/DATASET_ACCESS.md) for the application process and current setup status, and read the [Data Use Agreement](data/DATA_USE_AGREEMENT.md) before applying.
+The [self-collected research release](https://huggingface.co/datasets/Zhuxmmm/ProAct) contains **495 privacy-masked, silent 3840×2160 videos** and **18,747 masked 768×432 training keyframes** from 165 takes and 15 annotated tasks. It includes 569 annotation records and 2,918 step segments, preserving the existing 324-train/171-test video split without adding a validation split. The full 75-task graph catalog is `reference_only`.
 
-The Hugging Face application and download endpoint is being configured. During setup, applications may be sent to [zhuxiaomeng224@gmail.com](mailto:zhuxiaomeng224@gmail.com?subject=ProAct%20dataset%20access%20request) using the template in the access instructions. Submission does not automatically grant access. The final release will state its exact scope; access to the self-collected subset does not imply that all media described in the full ProAct-75 benchmark is included.
+Access requires individual manual approval for **non-commercial scientific research**. Read the public [application instructions](data/DATASET_ACCESS.md) and [Data Use Agreement](https://github.com/ZhuXMMM/ProAct/blob/6afeb9c6c54d0ef649a741a01c40e6e2c3816383/data/DATA_USE_AGREEMENT.md), then apply with your own account on the Hugging Face dataset page. After approval, authenticate with that account:
 
-The planned scope is 495 self-collected Tencent videos at original resolution with privacy masks, plus the corresponding exact training keyframes with a maximum image side of 768 pixels and matching privacy masks. The final asset inventory and video-to-keyframe/annotation mappings are still being confirmed; the training-keyframe count is pending and no download-ready package is claimed. Known source annotation issues include task-graph/vocabulary label discrepancies and conflicting embedded camera IDs. The release metadata will preserve and flag these issues rather than silently correcting source labels.
+```sh
+hf auth login
+hf download Zhuxmmm/ProAct --repo-type dataset --local-dir ProAct
+```
 
-COIN, Ego-Exo4D, and UCF-Crime media are not reuploaded here; use the [official source acquisition links](data/README.md). The full 75-task graph catalog remains `reference_only` metadata and does not imply that all benchmark media are included.
+Original training filenames are retained; metadata record the actual decoded frame ordinal and distinguish strong numeric alignment from historical inference. Source annotation label discrepancies and embedded camera-ID conflicts remain disclosed. See the [data overview](data/README.md) for alignment details, research limitations and official COIN/Ego-Exo4D/UCF-Crime acquisition links; external media are obtained separately.
 
 ## Repository Layout
 
@@ -45,7 +48,7 @@ COIN, Ego-Exo4D, and UCF-Crime media are not reuploaded here; use the [official 
 - `test/onestep_planning/`: One-step planning evaluation code and scripts.
 - `test/detection_prediction/`: Detection / prediction evaluation helpers and test runner.
 - `module_tools/TFace/recognition/README.md`: Third-party face recognition module README (with a note that data will be released in the future).
-- `data/`: Research-only dataset access instructions and the data use agreement; the planned video and training-keyframe files will be hosted separately under controlled access.
+- `data/`: Public research-access instructions, data use agreement, scope and limitations; masked videos and training keyframes are hosted separately on Hugging Face with individual approval.
 
 ## Quickstart
 
