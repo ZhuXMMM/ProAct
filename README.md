@@ -31,7 +31,9 @@ Extensive experiments demonstrate that ProAct-Helper outperforms strong closed-s
 
 ## Dataset
 
-Our self-collected data is currently undergoing a **privacy review**. The dataset will be released once the review is complete — **coming soon**.
+Access to the self-collected ProAct data is being prepared for **non-commercial scientific research only**, with **individual manual approval**. See [Dataset Access](data/DATASET_ACCESS.md) for the application process and current setup status, and read the [Data Use Agreement](data/DATA_USE_AGREEMENT.md) before applying.
+
+The Hugging Face application and download endpoint is being configured. During setup, applications may be sent to [zhuxiaomeng224@gmail.com](mailto:zhuxiaomeng224@gmail.com?subject=ProAct%20dataset%20access%20request) using the template in the access instructions. Submission does not automatically grant access. The final release will state its exact scope; access to the self-collected subset does not imply that all media described in the full ProAct-75 benchmark is included.
 
 ## Repository Layout
 
@@ -39,7 +41,7 @@ Our self-collected data is currently undergoing a **privacy review**. The datase
 - `test/onestep_planning/`: One-step planning evaluation code and scripts.
 - `test/detection_prediction/`: Detection / prediction evaluation helpers and test runner.
 - `module_tools/TFace/recognition/README.md`: Third-party face recognition module README (with a note that data will be released in the future).
-- `data/`: Placeholder directory. Self-collected data is under privacy review (coming soon).
+- `data/`: Research-only dataset access instructions and the data use agreement; video files are hosted separately under controlled access.
 
 ## Quickstart
 
@@ -121,4 +123,4 @@ If you find ProAct useful in your research, please consider citing:
 
 This project's code is released under the [Apache License 2.0](LICENSE).
 
-The self-collected dataset is not covered by this license and will be released separately (with its own terms) after the ongoing privacy review is complete.
+The self-collected dataset is **not** covered by the code license. It is governed separately by the [Data Use Agreement](data/DATA_USE_AGREEMENT.md), with research-only use and individual access approval.
